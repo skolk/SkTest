@@ -1,14 +1,14 @@
 
 int dir = 50;        // direction pin
-int step = 52;      // step pin
+int steppin = 52;      // step pin
 int Distance = 0;  // Record the number of steps we've taken
 int stepdelay = 100; // number of microseconds to delay
 
 void setup() {                
   pinMode(dir, OUTPUT);     
-  pinMode(step, OUTPUT);
+  pinMode(steppin, OUTPUT);
   digitalWrite(dir, LOW);
-  digitalWrite(step, LOW);
+  digitalWrite(steppin, LOW);
   
   
   Serial.begin(9600);
@@ -23,9 +23,9 @@ void loop() {
     
     if (steps > 0){
       for (int cnt = 0; cnt < steps; cnt++) {
-        digitalWrite(step, HIGH);
+        digitalWrite(steppin, HIGH);
         delayMicroseconds(stepdelay);          
-        digitalWrite(step, LOW); 
+        digitalWrite(steppin, LOW); 
         delayMicroseconds(stepdelay);
         Distance = Distance + 1;   // record this step
         }
