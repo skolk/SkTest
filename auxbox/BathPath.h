@@ -129,6 +129,7 @@ pinMode(valve2close, OUTPUT);
 pinMode(valve3open, OUTPUT);
 pinMode(valve3close, OUTPUT);
 pinMode(Silnoid, OUTPUT);
+pinMode(PUMP, OUTPUT); 
 
 digitalWrite(valve1open, HIGH);
 digitalWrite(valve1close, HIGH);
@@ -137,6 +138,7 @@ digitalWrite(valve2close, HIGH);
 digitalWrite(valve3open, HIGH);
 digitalWrite(valve3close, HIGH);
 digitalWrite(Silnoid, HIGH);
+digitalWrite(PUMP, HIGH);
   
   
 }

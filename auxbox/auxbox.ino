@@ -149,28 +149,28 @@ void processRequest(char* request) {
       Serial.print("KILL Captain");
   }
   
-
+//PROBLEM
   else if (cmdEqual(request, "1OPN")) {
-    digitalWrite(valve1open, LOW);
-    digitalWrite(valve1close, HIGH);
+    digitalWrite(valve1open, HIGH);
+    digitalWrite(valve1close, LOW);
       Serial.print("1OPN Captain");
   }
   
     else if (cmdEqual(request, "2OPN")) {
     digitalWrite(valve2open, LOW);
     digitalWrite(valve2close, HIGH);
-      Serial.print("1OPN Captain");
-  }
-  
-    else if (cmdEqual(request, "3OPN")) {
-    digitalWrite(valve3open, LOW);
-    digitalWrite(valve3close, HIGH);
       Serial.print("2OPN Captain");
+  }
+  // AN ISSUE SEAN
+    else if (cmdEqual(request, "3OPN")) {
+    digitalWrite(valve3open, HIGH);
+    digitalWrite(valve3close, LOW);
+      Serial.print("3OPN Captain");
   }
   
     else if (cmdEqual(request, "1COS")) {
-    digitalWrite(valve1open, HIGH);
-    digitalWrite(valve1close, LOW);
+    digitalWrite(valve1open, LOW);
+    digitalWrite(valve1close, HIGH);
       Serial.print("1COS Captain");
   }
   
@@ -182,8 +182,8 @@ void processRequest(char* request) {
   
   
         else if (cmdEqual(request, "3COS")) {
-    digitalWrite(valve3open, HIGH);
-    digitalWrite(valve3close, LOW);
+    digitalWrite(valve3open, LOW);
+    digitalWrite(valve3close, HIGH);
       Serial.print("3COS Captain");
   }
   
@@ -197,6 +197,20 @@ void processRequest(char* request) {
   else if (cmdEqual(request, "STOP")) {
     digitalWrite(Silnoid, HIGH);
     Serial.print("Stop'n Captain");
+  }
+
+//pump on
+   else if (cmdEqual(request, "PPON")) {
+    digitalWrite(PUMP, LOW);
+      Serial.print("PUMP ON Captain");
+      return;
+  }
+  
+  //pump off
+ else if (cmdEqual(request, "POFF")) {
+    digitalWrite(PUMP, HIGH);
+      Serial.print("PUMP OFF Captain");
+      return;
   }
   
   ////////////////////////////////////////////////////////////////////////
