@@ -149,10 +149,10 @@ void processRequest(char* request) {
       Serial.print("KILL Captain");
   }
   
-//PROBLEM
+//PROBLEM SEAN
   else if (cmdEqual(request, "1OPN")) {
-    digitalWrite(valve1open, HIGH);
-    digitalWrite(valve1close, LOW);
+    digitalWrite(valve1open, LOW);
+    digitalWrite(valve1close, HIGH);
       Serial.print("1OPN Captain");
   }
   
@@ -163,8 +163,8 @@ void processRequest(char* request) {
   }
   // AN ISSUE SEAN
     else if (cmdEqual(request, "3OPN")) {
-    digitalWrite(valve3open, HIGH);
-    digitalWrite(valve3close, LOW);
+    digitalWrite(valve3open, LOW);
+    digitalWrite(valve3close, HIGH);
       Serial.print("3OPN Captain");
   }
   
@@ -212,6 +212,21 @@ void processRequest(char* request) {
       Serial.print("PUMP OFF Captain");
       return;
   }
+
+
+   //heater on
+ //else if (cmdEqual(request, "HEAT")) {
+   // digitalWrite(PUMP, LOW);
+     // Serial.print("HEAT ON, Captain");
+      //return;
+ // }
+
+   //heater off
+ //else if (cmdEqual(request, "HOFF")) {
+    //digitalWrite(HEAT, HIGH);
+      //Serial.print("HEAT OFF Captain");
+      //return;
+//  }
   
   ////////////////////////////////////////////////////////////////////////
 

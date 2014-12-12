@@ -27,12 +27,12 @@
 #define PIN_SWITCH_HOMING 14
 
 
-#define  valve1open 22 //valve 1 open
-#define  valve1close 24 //valve 1 close
+#define  valve1close 22 //valve 1 open
+#define  valve1open 24 //valve 1 close
 #define  valve2open  26 //valve 2 open
 #define  valve2close 28 //valve 2 close
-#define  valve3open  30 //valve 3 open
-#define  valve3close  32 //valve 3 close
+#define  valve3close  30 //valve 3 open
+#define  valve3open  32 //valve 3 close
 #define  Silnoid  34 // silnoid open (mechanical default - closed)
 #define  PUMP  8 // pump open (mechanical default - closed)
 
