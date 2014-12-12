@@ -22,7 +22,7 @@ float readFlow() {
   float timeSinceLastMeasurementMS = (float)(now - lastMeasurementTimeMS);
   lastMeasurementTimeMS = now;
 
-  const float timeFactor = 1000.0 * 60.0 / 7.5; //(Pulse frequency x 60) / 7.5Q, = flow rate in L/hour
+  const float timeFactor = 1000.0 * 60.0 / 5.2; //(Pulse frequency x 60) / 5.2Q, = flow rate in L/hour
   return flowTicks * timeFactor / timeSinceLastMeasurementMS;
 }
 

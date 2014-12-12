@@ -21,7 +21,7 @@ All text above must be included in any redistribution
 LiquidCrystal lcd(7, 8, 9, 10, 11, 12);
 
 // which pin to use for reading the sensor? can use any pin!
-#define FLOWSENSORPIN 2
+#define FLOWSENSORPIN 5
 
 // count how many pulses!
 volatile uint16_t pulses = 0;
@@ -104,4 +104,4 @@ void loop()                     // run over and over again
   lcd.print(liters); lcd.print(" Liters        ");
  
   delay(100);
-}Adafruit_FlowMeterAdafruit_FlowMeter
+}

@@ -149,7 +149,7 @@ void processRequest(char* request) {
       Serial.print("KILL Captain");
   }
   
-//PROBLEM SEAN
+
   else if (cmdEqual(request, "1OPN")) {
     digitalWrite(valve1open, LOW);
     digitalWrite(valve1close, HIGH);
@@ -161,7 +161,7 @@ void processRequest(char* request) {
     digitalWrite(valve2close, HIGH);
       Serial.print("2OPN Captain");
   }
-  // AN ISSUE SEAN
+
     else if (cmdEqual(request, "3OPN")) {
     digitalWrite(valve3open, LOW);
     digitalWrite(valve3close, HIGH);
