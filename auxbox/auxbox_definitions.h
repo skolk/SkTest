@@ -34,7 +34,7 @@
 #define  valve3close  30 //valve 3 open
 #define  valve3open  32 //valve 3 close
 #define  Silnoid  34 // silnoid open (mechanical default - closed)
-#define  PUMP  8 // pump open (mechanical default - closed)
+#define  PUMP  36 // pump open (mechanical default - closed)
 
 
 
