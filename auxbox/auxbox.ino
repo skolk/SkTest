@@ -113,103 +113,89 @@ void processRequest(char* request) {
   }
   /////////////////////////////////////////////////////////////////////
   
-//NO CAPTURE 
+  //NO CAPTURE 
   else if (cmdEqual(request, "NCAP")) {
-    digitalWrite(valve1open, HIGH);
-    digitalWrite(valve1close, LOW);
-    digitalWrite(valve2open, HIGH);
-    digitalWrite(valve2close, LOW);
-    digitalWrite(valve3open, LOW);
-    digitalWrite(valve3close, HIGH);
+
+    valve1.close();
+    valve2.close();
+    valve3.open();
     digitalWrite(Silnoid, LOW);
-      Serial.print("NCAP Captain");
+    Serial.print("NCAP:DERP\n");
   }
   
 //CAPTURE FLOW
   else if (cmdEqual(request, "CAPT")) {
-    digitalWrite(valve1open, LOW);
-    digitalWrite(valve1close, HIGH);
-    digitalWrite(valve2open, LOW);
-    digitalWrite(valve2close, HIGH);
-    digitalWrite(valve3open, HIGH);
-    digitalWrite(valve3close, LOW);
+    valve1.open();
+    valve2.open();
+    valve3.close();
     digitalWrite(Silnoid, LOW);
-      Serial.print("CAPT Captain");
+    Serial.print("CAPT:DERP");
   }
   
 //KILL/END/ ALL SIGNALS ( SO RELAY ISN'T RUNNING) 
-  else if (cmdEqual(request, "KILL")) {
-    digitalWrite(valve1open, HIGH);
-    digitalWrite(valve1close, HIGH);
-    digitalWrite(valve2open, HIGH);
-    digitalWrite(valve2close, HIGH);
-    digitalWrite(valve3open, HIGH);
-    digitalWrite(valve3close, HIGH);
+  else if (cmdEqual(request, "HOLD")) {
+    valve1.hold();
+    valve2.hold();
+    valve3.hold();
     digitalWrite(Silnoid, HIGH);
-      Serial.print("KILL Captain");
+    Serial.print("HOLD:DEPR");
   }
   
 
   else if (cmdEqual(request, "1OPN")) {
-    digitalWrite(valve1open, LOW);
-    digitalWrite(valve1close, HIGH);
-      Serial.print("1OPN Captain");
+    valve1.open();
+    Serial.print("1OPN:DERP");
   }
   
-    else if (cmdEqual(request, "2OPN")) {
-    digitalWrite(valve2open, LOW);
-    digitalWrite(valve2close, HIGH);
-      Serial.print("2OPN Captain");
+  else if (cmdEqual(request, "2OPN")) {
+    valve2.open();
+    Serial.print("2OPN:DERP");
   }
 
-    else if (cmdEqual(request, "3OPN")) {
-    digitalWrite(valve3open, LOW);
-    digitalWrite(valve3close, HIGH);
-      Serial.print("3OPN Captain");
+  else if (cmdEqual(request, "3OPN")) {
+    valve3.open();
+    Serial.print("3OPN:DERP");
   }
   
-    else if (cmdEqual(request, "1COS")) {
-    digitalWrite(valve1open, LOW);
-    digitalWrite(valve1close, HIGH);
-      Serial.print("1COS Captain");
+  else if (cmdEqual(request, "1COS")) {
+    valve1.close();
+      Serial.print("1COS:DERP");
   }
   
-      else if (cmdEqual(request, "2COS")) {
-    digitalWrite(valve2open, HIGH);
-    digitalWrite(valve2close, LOW);
-      Serial.print("2COS Captain");
+  else if (cmdEqual(request, "2COS")) {
+    valve2.close();
+    Serial.print("2COS:DERP");
   }
   
   
-        else if (cmdEqual(request, "3COS")) {
-    digitalWrite(valve3open, LOW);
-    digitalWrite(valve3close, HIGH);
-      Serial.print("3COS Captain");
+  else if (cmdEqual(request, "3COS")) {
+    valve3.close();
+    Serial.print("3COS:DERP");
   }
   
 //START - OPEN SILNOID
   else if (cmdEqual(request, "STRT")) {
     digitalWrite(Silnoid, LOW);
-    Serial.print("FLowing Freely Captain");
+    Serial.print("STRT:DERP");
   }
 
 //STOP - CLOSE SILNOID 
   else if (cmdEqual(request, "STOP")) {
     digitalWrite(Silnoid, HIGH);
-    Serial.print("Stop'n Captain");
+    Serial.print("STOP:DERP");
   }
 
 //pump on
    else if (cmdEqual(request, "PPON")) {
     digitalWrite(PUMP, LOW);
-      Serial.print("PUMP ON Captain");
+      Serial.print("PPON:DERP");
       return;
   }
   
   //pump off
  else if (cmdEqual(request, "POFF")) {
     digitalWrite(PUMP, HIGH);
-      Serial.print("PUMP OFF Captain");
+      Serial.print("POFF:DERP");
       return;
   }
 
