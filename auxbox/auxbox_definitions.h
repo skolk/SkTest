@@ -26,16 +26,14 @@
 #define PIN_SWITCH_SAFETY 17
 #define PIN_SWITCH_HOMING 14
 
-
-#define  valve1close 22 //valve 1 open
-#define  valve1open 24 //valve 1 close
-#define  valve2open  26 //valve 2 open
-#define  valve2close 28 //valve 2 close
-#define  valve3close  30 //valve 3 open
-#define  valve3open  32 //valve 3 close
-#define  Silnoid  34 // silnoid open (mechanical default - closed)
-#define  PUMP  36 // pump open (mechanical default - closed)
-
+#define PIN_VALVE1_CLOSE 22
+#define PIN_VALVE1_OPEN 24
+#define valve2open 26 //valve 2 open
+#define valve2close 28 //valve 2 close
+#define valve3close 30 //valve 3 open
+#define valve3open 32 //valve 3 close
+#define PIN_SOLENOID 34 // solenoid open (mechanical default - closed)
+#define PUMP 36 // pump open (mechanical default - closed)
 
 
 
